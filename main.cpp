@@ -1,7 +1,27 @@
 #include <iostream>
+#include "searchSortAlgorithms.h"
+using namespace std;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    // Declare a list of 10 integers
+    int list[] = {1, 2, 3, 4, 5, 6, 7, 8, 9 ,10};
+    int input;
+    for(int i=0; i<10; i++) {
+        cin >> input;
+        list[i] = input;
+    }
+
+    for(auto i: list) {
+        cout << i << " ";
+    }
+    cout << endl;
+
+    insertionSort(list, 10);
+    for(auto i: list) {
+        cout << i << " ";
+    }
+    cout << endl;
+
     return 0;
 }
 
